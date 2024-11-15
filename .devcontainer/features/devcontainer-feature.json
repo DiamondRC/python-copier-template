@@ -1,0 +1,30 @@
+{
+    "name": "BASH terminal configuration",
+    "id": "BASH",
+    "version": "1.0.0",
+    "containerEnv": {
+        "CONFIG_FOLDER": "/devcontainer_rc"
+    },
+    "description": "Make default BASH terminal nicer.",
+    // "options": {
+    //     "host_config_folder": {
+    //         "type": "string",
+    //         "default": "${localEnv:HOME}/.config/devcontainer_rc",
+    //         "description": "host folder for devcontainer shell configuration"
+    //     }
+    // },
+    "mounts": [
+        {
+            "source": "${localEnv:HOME}/.config/devcontainer_rc",
+            "target": "/devcontainer_rc",
+            "type": "bind"
+        }
+    ],
+    "onCreateCommand": "bash .devcontainer/features/onCreateCommand.sh"
+    // wack below into /devcontainer_rc/.bashrc
+    // delete this line if you do not want opinionated defaults
+    // source .devcontainer_rc/.bash_generated.sh
+    // Add your personal configuration preferences below
+    // not needed?
+    // "postCreateCommand": "echo source /.devcontainer_rc/bashrc >> /root/.bashrc"
+}
