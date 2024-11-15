@@ -62,7 +62,7 @@ cat > $CONFIG_STAGING/feature_settings_rc  \
 # default opinioned bash configuration
 
 # set the prompt
-export PS1='\W # '
+export PS1="\[\033[1;34m\]\W \[\033[0m\]# "
 
 # enable enternal shared history
 export HISTCONTROL=ignoreboth:erasedups
