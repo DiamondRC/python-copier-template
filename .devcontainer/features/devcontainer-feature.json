@@ -3,7 +3,8 @@
     "id": "BASH",
     "version": "1.0.0",
     "containerEnv": {
-        "CONFIG_FOLDER": "/devcontainer_rc"
+        "CONFIG_FOLDER": "/devcontainer_rc",
+        "CONFIG_STAGING": "/devcontainer_staging"
     },
     "description": "Make default BASH terminal nicer.",
     // "options": {
@@ -20,7 +21,7 @@
             "type": "bind"
         }
     ],
-    "onCreateCommand": "bash .devcontainer/features/onCreateCommand.sh"
+    "onCreateCommand": "bash /devcontainer_staging/onCreateCommand.sh"
     // wack below into /devcontainer_rc/.bashrc
     // delete this line if you do not want opinionated defaults
     // source .devcontainer_rc/.bash_generated.sh
